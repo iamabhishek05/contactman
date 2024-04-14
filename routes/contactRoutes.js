@@ -8,26 +8,13 @@ const { deleteContact } = require('../controllers/contactControllers')
 
 
 
-// route for all contacts 
-router.route("/").get(getContacts)
+// route for all contacts & post route to create a new contact
+router.route("/").get(getContacts).post(createContact)
 
 
-// route for a single contact
-router.route("/:id").get(getContact)
+// route for a single contact , put route to update a contact & delete route to delete a contact
+router.route("/:id").get(getContact).put(updateContact).put(deleteContact)
 
 
-// post route to create a new contact
 
-router.route("/").post(createContact)
-
-
-// put route to update a contact
-
-router.route("/:id").put(updateContact)
-
-// delete route to delete a contact
-
-router.route("/:id").delete(deleteContact)
-
-
-module.exports = router;  
+module.exports = router;   
