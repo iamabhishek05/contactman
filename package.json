@@ -4,7 +4,7 @@
   "description": "This is a project for my backend api ",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "author": "Abhishek Tiwari",
   "license": "ISC",
