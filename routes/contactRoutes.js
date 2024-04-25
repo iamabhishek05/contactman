@@ -5,8 +5,13 @@ const { createContact } = require('../controllers/contactControllers')
 const { getContact } = require('../controllers/contactControllers')
 const { updateContact } = require('../controllers/contactControllers')
 const { deleteContact } = require('../controllers/contactControllers')
+const { validateToken } = require("../middlewares/validateTokenHandler")
 
 
+
+// route to validate all the private routes
+
+router.use(validateToken)
 
 // route for all contacts & post route to create a new contact
 router.route("/").get(getContacts).post(createContact)

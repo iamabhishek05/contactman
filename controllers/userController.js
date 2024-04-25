@@ -75,7 +75,7 @@ const loginUser = asyncHandler(async (req, res) => {
                 email: user.email,
             },
         }, process.env.ACCESS_TOKEN_SECRET,
-            { expiresIn: "1m" })
+            { expiresIn: "15m" })
     } else {
         res.status(400);
         throw new Error(" User data is not valid")
